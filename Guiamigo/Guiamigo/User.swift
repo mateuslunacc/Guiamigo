@@ -8,7 +8,15 @@
 
 import Foundation
 
-class UserDAO {
+class User {
+    var name: String
     
+    init(name: String) {
+        self.name = name
+    }
+    
+}
+
+class UserDAO {
     
 }

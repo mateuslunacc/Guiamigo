@@ -13,13 +13,9 @@
 		3F3CCC4D1E8300400038B631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC4C1E8300400038B631 /* Assets.xcassets */; };
 		3F3CCC501E8300400038B631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC4E1E8300400038B631 /* LaunchScreen.storyboard */; };
 		3F3CCCD91E84621C0038B631 /* guiamigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCD71E84621C0038B631 /* guiamigo.xcdatamodeld */; };
-		3F3CCCDB1E8466AE0038B631 /* EventDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCDA1E8466AE0038B631 /* EventDAO.swift */; };
-		3F3CCCE91E846AB20038B631 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCE51E846AB20038B631 /* Event+CoreDataClass.swift */; };
-		3F3CCCEA1E846AB20038B631 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCE61E846AB20038B631 /* Event+CoreDataProperties.swift */; };
-		3F3CCCEB1E846AB20038B631 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCE71E846AB20038B631 /* User+CoreDataClass.swift */; };
-		3F3CCCEC1E846AB20038B631 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCE81E846AB20038B631 /* User+CoreDataProperties.swift */; };
+		3F3CCCDB1E8466AE0038B631 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCDA1E8466AE0038B631 /* Event.swift */; };
 		3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */; };
-		3FF1A9421E846CD4001FDB22 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A9411E846CD4001FDB22 /* UserDAO.swift */; };
+		3FF1A9421E846CD4001FDB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A9411E846CD4001FDB22 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +27,9 @@
 		3F3CCC4F1E8300400038B631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3CCC511E8300400038B631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3CCCD81E84621C0038B631 /* guiamigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = guiamigo.xcdatamodel; sourceTree = "<group>"; };
-		3F3CCCDA1E8466AE0038B631 /* EventDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDAO.swift; sourceTree = "<group>"; };
-		3F3CCCE51E846AB20038B631 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F3CCCE61E846AB20038B631 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3F3CCCE71E846AB20038B631 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F3CCCE81E846AB20038B631 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F3CCCDA1E8466AE0038B631 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		3FF1A9411E846CD4001FDB22 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		3FF1A9411E846CD4001FDB22 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */,
-				3F3CCCE51E846AB20038B631 /* Event+CoreDataClass.swift */,
-				3F3CCCE61E846AB20038B631 /* Event+CoreDataProperties.swift */,
-				3F3CCCE71E846AB20038B631 /* User+CoreDataClass.swift */,
-				3F3CCCE81E846AB20038B631 /* User+CoreDataProperties.swift */,
 				3F3CCCD71E84621C0038B631 /* guiamigo.xcdatamodeld */,
-				3F3CCCDA1E8466AE0038B631 /* EventDAO.swift */,
-				3FF1A9411E846CD4001FDB22 /* UserDAO.swift */,
+				3F3CCCDA1E8466AE0038B631 /* Event.swift */,
+				3FF1A9411E846CD4001FDB22 /* User.swift */,
 				3F3CCCDC1E8468820038B631 /* Supporting Files */,
 				3F3CCC471E8300400038B631 /* ViewController.swift */,
 				3F3CCC491E8300400038B631 /* Main.storyboard */,
@@ -128,6 +116,7 @@
 				TargetAttributes = {
 					3F3CCC411E8300400038B631 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3XP38D26E2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -168,16 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3CCCEA1E846AB20038B631 /* Event+CoreDataProperties.swift in Sources */,
-				3F3CCCDB1E8466AE0038B631 /* EventDAO.swift in Sources */,
-				3F3CCCEC1E846AB20038B631 /* User+CoreDataProperties.swift in Sources */,
-				3FF1A9421E846CD4001FDB22 /* UserDAO.swift in Sources */,
+				3F3CCCDB1E8466AE0038B631 /* Event.swift in Sources */,
+				3FF1A9421E846CD4001FDB22 /* User.swift in Sources */,
 				3F3CCCD91E84621C0038B631 /* guiamigo.xcdatamodeld in Sources */,
-				3F3CCCE91E846AB20038B631 /* Event+CoreDataClass.swift in Sources */,
 				3F3CCC481E8300400038B631 /* ViewController.swift in Sources */,
 				3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */,
 				3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */,
-				3F3CCCEB1E846AB20038B631 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +285,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3XP38D26E2;
 				INFOPLIST_FILE = Guiamigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.hackatruck.Guiamigo;
@@ -312,6 +299,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3XP38D26E2;
 				INFOPLIST_FILE = Guiamigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.hackatruck.Guiamigo;
