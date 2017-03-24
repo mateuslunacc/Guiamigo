@@ -12,4 +12,7 @@ import CoreData
 
 public class Event: NSManagedObject {
 
+    init(name: String, start: Date, end: Date, latitude: Double, longitude: Double, host: User) {
+        
+    }
 }

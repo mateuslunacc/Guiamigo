@@ -8,7 +8,13 @@
 
 import Foundation
 
-class EventDAO {
 
+class EventDAO {
+    static func getEvents() {
+        return [
+            Event(context: <#T##NSManagedObjectContext#>)
+        ]
+        
+    }
     
 }
