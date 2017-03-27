@@ -9,11 +9,23 @@
 import Foundation
 
 class User {
-    var name: String
+    var firstName: String
+    var lastName: String
+    var email: String
+    var password: String
+    var birthday: NSDate
+    var picture: String
     
-    init(name: String) {
-        self.name = name
+    init(firstName: String, lastName: String, email: String, password: String, birthday: NSDate) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.password = password
+        self.birthday = birthday
+        self.picture = "default-profile-icon"
     }
+    
+    //init()
     
 }
 

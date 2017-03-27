@@ -10,13 +10,13 @@ import Foundation
 
 class Event {
     var name: String
-    var start: Date
-    var end: Date
+    var start: NSDate
+    var end: NSDate
     var latitude: Double
     var longitude: Double
     var host: User
     
-    init(name: String, start: Date, end: Date, latitude: Double, longitude: Double, host: User) {
+    init(name: String, start: NSDate, end: NSDate, latitude: Double, longitude: Double, host: User) {
         self.name = name
         self.start = start
         self.end = end
@@ -31,16 +31,16 @@ class Event {
         self.latitude = latitude
         self.longitude = longitude
         self.host = host
-        self.start = Date()
-        self.end = Date()
+        self.start = NSDate()
+        self.end = NSDate()
     }
 }
 
 class EventDAO {
     static func getEvents() -> [Event] {
-        let user1 = User(name: "Ed")
-        let user2 = User(name: "Diego")
-        let user3 = User(name: "Rafa")
+        let user1 = User(firstName: "Ed", lastName: "Silva", email: "ed.silva@gmail.com", password: "12345", birthday: NSDate())
+        let user2 = User(firstName: "Ed2", lastName: "Silva", email: "ed2.silva@gmail.com", password: "12345", birthday: NSDate())
+        let user3 = User(firstName: "Ed3", lastName: "Silva", email: "ed3.silva@gmail.com", password: "12345", birthday: NSDate())
         
         return [
             Event(name: "Festa na casa de Ed!", latitude: -7.209134, longitude: -35.871502, host: user1),

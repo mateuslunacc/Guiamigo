@@ -55,7 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
             
             newAnnotation.coordinate.latitude = event.latitude
             newAnnotation.coordinate.longitude = event.longitude
-            newAnnotation.title = event.host.name
+            newAnnotation.title = "\(event.host.firstName) \(event.host.lastName)"
             newAnnotation.subtitle = String(describing: "\(event.name)")
             
             eventPoints.append(newAnnotation)
