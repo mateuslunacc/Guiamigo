@@ -9,13 +9,22 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate  {
+class MainViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBAction func addEventButton(_ sender: UIBarButtonItem) {
+        if UserDAO.userLogged != nil {
+            self.performSegue(withIdentifier: "chooseLocationSegue", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "signInSegue", sender: self)
+        }
+    }
     
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
     var events: [Event] = []
+    
     
     
     override func viewDidLoad() {
@@ -31,6 +40,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     func setupLocationManager() {
         
@@ -45,7 +58,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
         
     }
-    
+
     func addAnnotationToMap() {
         
         var eventPoints = [MKPointAnnotation]()
@@ -65,6 +78,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         mapView.addAnnotations(eventPoints)
 
     }
+
 
 }
 

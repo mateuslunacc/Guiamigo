@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0461721E89960D005FF532 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461711E89960D005FF532 /* SignInViewController.swift */; };
+		3F0461741E899637005FF532 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461731E899637005FF532 /* LogInViewController.swift */; };
+		3F0461761E899649005FF532 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461751E899649005FF532 /* SignUpViewController.swift */; };
+		3F0461781E8AE08D005FF532 /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */; };
+		3F04617A1E8AEB13005FF532 /* NewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */; };
 		3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC451E8300400038B631 /* AppDelegate.swift */; };
-		3F3CCC481E8300400038B631 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC471E8300400038B631 /* ViewController.swift */; };
+		3F3CCC481E8300400038B631 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC471E8300400038B631 /* MainViewController.swift */; };
 		3F3CCC4B1E8300400038B631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC491E8300400038B631 /* Main.storyboard */; };
 		3F3CCC4D1E8300400038B631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC4C1E8300400038B631 /* Assets.xcassets */; };
 		3F3CCC501E8300400038B631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC4E1E8300400038B631 /* LaunchScreen.storyboard */; };
@@ -19,9 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0461711E89960D005FF532 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3F0461731E899637005FF532 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3F0461751E899649005FF532 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
+		3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocationViewController.swift; sourceTree = "<group>"; };
 		3F3CCC421E8300400038B631 /* Guiamigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiamigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3CCC451E8300400038B631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F3CCC471E8300400038B631 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F3CCC471E8300400038B631 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3F3CCC4A1E8300400038B631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F3CCC4C1E8300400038B631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3CCC4F1E8300400038B631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,8 +77,13 @@
 				3F3CCCDA1E8466AE0038B631 /* Event.swift */,
 				3FF1A9411E846CD4001FDB22 /* User.swift */,
 				3F3CCCDC1E8468820038B631 /* Supporting Files */,
-				3F3CCC471E8300400038B631 /* ViewController.swift */,
+				3F3CCC471E8300400038B631 /* MainViewController.swift */,
 				3F3CCC491E8300400038B631 /* Main.storyboard */,
+				3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */,
+				3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */,
+				3F0461751E899649005FF532 /* SignUpViewController.swift */,
+				3F0461731E899637005FF532 /* LogInViewController.swift */,
+				3F0461711E89960D005FF532 /* SignInViewController.swift */,
 				3F3CCC4C1E8300400038B631 /* Assets.xcassets */,
 			);
 			path = Guiamigo;
@@ -157,11 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0461721E89960D005FF532 /* SignInViewController.swift in Sources */,
 				3F3CCCDB1E8466AE0038B631 /* Event.swift in Sources */,
 				3FF1A9421E846CD4001FDB22 /* User.swift in Sources */,
 				3F3CCCD91E84621C0038B631 /* guiamigo.xcdatamodeld in Sources */,
-				3F3CCC481E8300400038B631 /* ViewController.swift in Sources */,
+				3F0461741E899637005FF532 /* LogInViewController.swift in Sources */,
+				3F3CCC481E8300400038B631 /* MainViewController.swift in Sources */,
+				3F0461761E899649005FF532 /* SignUpViewController.swift in Sources */,
+				3F04617A1E8AEB13005FF532 /* NewLocationViewController.swift in Sources */,
 				3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */,
+				3F0461781E8AE08D005FF532 /* CreateNewEventViewController.swift in Sources */,
 				3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

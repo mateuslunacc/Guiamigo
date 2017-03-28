@@ -16,6 +16,7 @@ class User {
     var birthday: NSDate
     var picture: String
     
+    
     init(firstName: String, lastName: String, email: String, password: String, birthday: NSDate) {
         self.firstName = firstName
         self.lastName = lastName
@@ -30,5 +31,14 @@ class User {
 }
 
 class UserDAO {
+    static var userLogged: User?
+    
+    static func getUsers() -> [User] {
+        return [
+            User(firstName: "Mateus", lastName: "Luna", email: "mateus.luna@ccc.ufcg.edu.br", password: "12345", birthday: NSDate())
+        ]
+    }
+    
+    
     
 }

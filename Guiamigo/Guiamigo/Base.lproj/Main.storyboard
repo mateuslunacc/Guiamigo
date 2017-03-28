@@ -13,7 +13,7 @@
         <!--Events near you-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,17 +37,19 @@
                     <navigationItem key="navigationItem" title="Events near you" id="Dib-nT-SP9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YDH-pA-ZTM">
                             <connections>
-                                <segue destination="571-lW-iYz" kind="show" id="wrh-lO-B1U"/>
+                                <action selector="addEventButton:" destination="BYZ-38-t0r" id="lKN-98-klb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="8YO-fd-uti" id="R4L-jq-e0h"/>
+                        <segue destination="571-lW-iYz" kind="show" identifier="signInSegue" id="9t6-O6-oLN"/>
+                        <segue destination="4eP-gP-w9c" kind="show" identifier="chooseLocationSegue" id="B3b-hW-4ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="791"/>
+            <point key="canvasLocation" x="1030" y="790"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JWJ-Wd-lJN">
@@ -116,10 +118,117 @@
             </objects>
             <point key="canvasLocation" x="249" y="1518"/>
         </scene>
+        <!--Choose location-->
+        <scene sceneID="w1l-y1-zl0">
+            <objects>
+                <viewController id="4eP-gP-w9c" customClass="NewLocationViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eqR-85-ge6"/>
+                        <viewControllerLayoutGuide type="bottom" id="bDg-vX-Aji"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UO8-OB-CqD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mv6-PK-RWd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mv6-PK-RWd" firstAttribute="leading" secondItem="UO8-OB-CqD" secondAttribute="leading" id="DKc-OP-v6d"/>
+                            <constraint firstAttribute="trailing" secondItem="Mv6-PK-RWd" secondAttribute="trailing" id="bJn-Nm-JuU"/>
+                            <constraint firstItem="Mv6-PK-RWd" firstAttribute="top" secondItem="eqR-85-ge6" secondAttribute="bottom" id="c3l-Ps-QvS"/>
+                            <constraint firstItem="bDg-vX-Aji" firstAttribute="top" secondItem="Mv6-PK-RWd" secondAttribute="bottom" id="mtH-5f-XqB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose location" id="ueB-QF-clQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IaL-Cn-AZG">
+                            <connections>
+                                <segue destination="jKy-0O-eSQ" kind="show" identifier="setEventSegue" id="6ej-90-hGM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Mv6-PK-RWd" id="cAB-DX-HgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcX-RU-mBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="78"/>
+        </scene>
+        <!--Set Event-->
+        <scene sceneID="GpM-bC-Jva">
+            <objects>
+                <viewController id="jKy-0O-eSQ" customClass="CreateNewEventViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8rP-bB-5aK"/>
+                        <viewControllerLayoutGuide type="bottom" id="VRl-43-9QS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wee-on-toN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-rn-a51">
+                                <rect key="frame" x="24" y="72" width="327" height="535"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-JC-zZM">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krN-gf-c3c">
+                                        <rect key="frame" x="0.0" y="38" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YBS-kG-djh">
+                                        <rect key="frame" x="0.0" y="66.5" width="327" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="512415754.67742503">
+                                            <!--2017-03-28 17:42:34 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRU-su-nyG">
+                                        <rect key="frame" x="0.0" y="290.5" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NW6-jD-mDL">
+                                        <rect key="frame" x="0.0" y="319" width="327" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="512415763.37589598">
+                                            <!--2017-03-28 17:42:43 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UdG-rn-a51" firstAttribute="top" secondItem="8rP-bB-5aK" secondAttribute="bottom" constant="8" id="Vo2-os-vWG"/>
+                            <constraint firstItem="UdG-rn-a51" firstAttribute="leading" secondItem="wee-on-toN" secondAttribute="leadingMargin" constant="8" id="YMA-qu-FR0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UdG-rn-a51" secondAttribute="trailing" constant="8" id="pOR-WR-i3k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Event" id="iDn-Nz-TMV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CQb-ZQ-6SP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="endTimeDatePicker" destination="NW6-jD-mDL" id="bci-Mj-Lmw"/>
+                        <outlet property="eventNameTextLabel" destination="Ah3-JC-zZM" id="Mju-uU-B8H"/>
+                        <outlet property="startTimeDatePicker" destination="YBS-kG-djh" id="RoB-Ep-s0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec9-pf-qeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="78"/>
+        </scene>
         <!--Sign in-->
         <scene sceneID="tpa-Zm-Bto">
             <objects>
-                <viewController id="571-lW-iYz" sceneMemberID="viewController">
+                <viewController id="571-lW-iYz" customClass="SignInViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ad-l4-29d"/>
                         <viewControllerLayoutGuide type="bottom" id="aaV-3w-fzd"/>
@@ -129,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-Le-trB" userLabel="Sign in Stack View">
-                                <rect key="frame" x="24" y="591" width="327" height="68"/>
+                                <rect key="frame" x="24" y="542" width="327" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18x-PW-for">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
@@ -138,7 +247,7 @@
                                             <color key="titleColor" red="0.33333333329999998" green="0.61568627450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xkN-BV-CLX" kind="show" id="ydE-8G-gGM"/>
+                                            <segue destination="xkN-BV-CLX" kind="show" id="pSK-gh-XKG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-3j-yPI">
@@ -148,7 +257,7 @@
                                             <color key="titleColor" red="0.33333333329999998" green="0.61568627450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="s19-8y-LFb" kind="show" id="dce-9w-4FL"/>
+                                            <segue destination="s19-8y-LFb" kind="show" id="rxb-4U-a2j"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -162,15 +271,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="Zff-Ik-iOP"/>
+                    <connections>
+                        <outlet property="logInButton" destination="18x-PW-for" id="gMd-7K-V1h"/>
+                        <outlet property="signUpButton" destination="fx9-3j-yPI" id="NwA-0N-83k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Upe-MA-L1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="1518"/>
+            <point key="canvasLocation" x="1830" y="791"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="vxw-yf-ibG">
             <objects>
-                <viewController id="s19-8y-LFb" userLabel="Sign up" sceneMemberID="viewController">
+                <viewController id="s19-8y-LFb" userLabel="Sign up" customClass="SignUpViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BR-qn-tFG"/>
                         <viewControllerLayoutGuide type="bottom" id="tyg-Rh-mRb"/>
@@ -257,15 +370,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign up" id="qc3-HQ-rza"/>
+                    <connections>
+                        <outlet property="birthdayDatePicker" destination="Cci-B2-e3I" id="j9F-8E-wVW"/>
+                        <outlet property="emailTextField" destination="OtE-bB-7rF" id="NGe-kq-hGS"/>
+                        <outlet property="firstNameTextField" destination="gDP-8R-i6s" id="3Dq-kf-dVh"/>
+                        <outlet property="genderSegmentedControl" destination="iYe-SA-72B" id="OIE-ej-y49"/>
+                        <outlet property="lastNameTextField" destination="zfD-BQ-k6B" id="y6B-oA-2cY"/>
+                        <outlet property="passwordTextField" destination="FOz-tl-Hm0" id="Ugh-Wf-E6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgz-FA-eXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="1864"/>
+            <point key="canvasLocation" x="2636" y="1156"/>
         </scene>
         <!--Login-->
         <scene sceneID="42u-3z-n6O">
             <objects>
-                <viewController title="Login" id="xkN-BV-CLX" sceneMemberID="viewController">
+                <viewController title="Login" id="xkN-BV-CLX" customClass="LogInViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8EJ-2F-C68"/>
                         <viewControllerLayoutGuide type="bottom" id="NJR-mJ-rvg"/>
@@ -275,7 +396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="clp-Hc-rt4" userLabel="Login Stack View">
-                                <rect key="frame" x="24" y="72" width="327" height="144"/>
+                                <rect key="frame" x="24" y="28" width="327" height="144"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-OB-evH">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
@@ -295,10 +416,16 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.90588235294117647" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="xkN-BV-CLX" eventType="touchUpInside" id="Btr-So-3Xy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGr-LX-eDG">
                                         <rect key="frame" x="0.0" y="114" width="327" height="30"/>
                                         <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotButton:" destination="xkN-BV-CLX" eventType="touchUpInside" id="4nm-wT-er7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -313,10 +440,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Log in" id="Htk-WW-JUc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Z3f-OB-evH" id="Vuw-UG-VZg"/>
+                        <outlet property="passwordTextField" destination="Svs-vO-gno" id="YFd-iQ-5ov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltU-LG-a0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="1191"/>
+            <point key="canvasLocation" x="2636" y="484"/>
         </scene>
     </scenes>
 </document>
