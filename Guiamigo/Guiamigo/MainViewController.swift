@@ -30,9 +30,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         events = EventDAO.getEvents()
-        self.setupLocationManager()
-        self.addAnnotationToMap()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -41,8 +38,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        self.setupLocationManager()
+        self.addAnnotationToMap()
     }
 
     func setupLocationManager() {
@@ -63,7 +62,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
         
         var eventPoints = [MKPointAnnotation]()
         
-        for event in events {
+        for event in EventDAO.events {
             let newAnnotation = MKPointAnnotation()
             
             newAnnotation.coordinate.latitude = event.latitude

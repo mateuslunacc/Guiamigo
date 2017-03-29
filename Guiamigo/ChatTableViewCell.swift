@@ -10,18 +10,8 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var chatView: UIImageView!
-    @IBOutlet weak var chatBar: UINavigationBar!
+    @IBOutlet weak var userChatImage: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var chatEventName: UILabel!
 
 }

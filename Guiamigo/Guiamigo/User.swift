@@ -35,7 +35,8 @@ class UserDAO {
     
     static func getUsers() -> [User] {
         return [
-            User(firstName: "Mateus", lastName: "Luna", email: "mateus.luna@ccc.ufcg.edu.br", password: "12345", birthday: NSDate())
+            User(firstName: "Mateus", lastName: "Luna", email: "mateus.luna@ccc.ufcg.edu.br", password: "12345", birthday: NSDate()),
+            User(firstName: "Teste", lastName: ":)", email: "teste", password: "123", birthday: NSDate())
         ]
     }
     

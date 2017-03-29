@@ -12,6 +12,9 @@
 		3F0461761E899649005FF532 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461751E899649005FF532 /* SignUpViewController.swift */; };
 		3F0461781E8AE08D005FF532 /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */; };
 		3F04617A1E8AEB13005FF532 /* NewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */; };
+		3F04617C1E8C4778005FF532 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */; };
+		3F04617E1E8C48C7005FF532 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617D1E8C48C7005FF532 /* Chat.swift */; };
+		3F0461801E8C4A2D005FF532 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */; };
 		3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC451E8300400038B631 /* AppDelegate.swift */; };
 		3F3CCC481E8300400038B631 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC471E8300400038B631 /* MainViewController.swift */; };
 		3F3CCC4B1E8300400038B631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC491E8300400038B631 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		3F0461751E899649005FF532 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocationViewController.swift; sourceTree = "<group>"; };
+		3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
+		3F04617D1E8C48C7005FF532 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3F3CCC421E8300400038B631 /* Guiamigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiamigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3CCC451E8300400038B631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3CCC471E8300400038B631 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -77,11 +83,14 @@
 				3F3CCCDC1E8468820038B631 /* Supporting Files */,
 				3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */,
 				3F65F7971E8C32A9007C6C7A /* ChatTableViewCell.swift */,
+				3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */,
 				3F3CCCD71E84621C0038B631 /* guiamigo.xcdatamodeld */,
 				3F3CCCDA1E8466AE0038B631 /* Event.swift */,
 				3FF1A9411E846CD4001FDB22 /* User.swift */,
 				3F3CCC471E8300400038B631 /* MainViewController.swift */,
 				3F3CCC491E8300400038B631 /* Main.storyboard */,
+				3F04617D1E8C48C7005FF532 /* Chat.swift */,
+				3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */,
 				3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */,
 				3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */,
 				3F0461751E899649005FF532 /* SignUpViewController.swift */,
@@ -184,8 +193,11 @@
 				3F0461761E899649005FF532 /* SignUpViewController.swift in Sources */,
 				3F04617A1E8AEB13005FF532 /* NewLocationViewController.swift in Sources */,
 				3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */,
+				3F04617E1E8C48C7005FF532 /* Chat.swift in Sources */,
 				3F65F7981E8C32A9007C6C7A /* ChatTableViewCell.swift in Sources */,
 				3F0461781E8AE08D005FF532 /* CreateNewEventViewController.swift in Sources */,
+				3F04617C1E8C4778005FF532 /* ChatsTableViewController.swift in Sources */,
+				3F0461801E8C4A2D005FF532 /* ChatViewController.swift in Sources */,
 				3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

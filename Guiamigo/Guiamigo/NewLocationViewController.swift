@@ -89,7 +89,7 @@ class NewLocationViewController: UIViewController, CLLocationManagerDelegate {
         
         if (!validPoint) {
             // 1. Crie o AlertController
-            let alert: UIAlertController = UIAlertController(title: "Miss coordinate",
+            let alert: UIAlertController = UIAlertController(title: "Missing coordinate",
                                                              message: "Please, add a location.",
                                                              preferredStyle: .alert)
             

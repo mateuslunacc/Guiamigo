@@ -62,7 +62,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="3BU-Gc-GPp" kind="relationship" relationship="viewControllers" id="pRh-ZH-LCY"/>
-                        <segue destination="dcQ-zk-mVD" kind="relationship" relationship="viewControllers" id="gRV-gA-7vM"/>
+                        <segue destination="9Vj-S5-99D" kind="relationship" relationship="viewControllers" id="gRV-gA-7vM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5J-Bm-xIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,19 +91,49 @@
         <!--Chats-->
         <scene sceneID="hJk-M0-kOU">
             <objects>
-                <tableViewController id="dcQ-zk-mVD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AO3-wH-o40">
+                <tableViewController id="dcQ-zk-mVD" customClass="ChatsTableViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="AO3-wH-o40">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="a6n-xK-Lja">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatIdentifier" rowHeight="111" id="zqk-th-cut" customClass="ChatTableViewCell" customModule="Guiamigo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a6n-xK-Lja" id="GI9-1K-TAv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zqk-th-cut" id="gva-s3-2RH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-mo-3BG">
+                                            <rect key="frame" x="8" y="16" width="359" height="90.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-VN-ysV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="0B0-o8-2UZ"/>
+                                                        <constraint firstAttribute="height" constant="90" id="lhR-vC-sbK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkF-n0-2B5">
+                                                    <rect key="frame" x="98" y="0.0" width="261" height="90.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cdu-mo-3BG" firstAttribute="top" secondItem="gva-s3-2RH" secondAttribute="topMargin" constant="8" id="4hK-De-96N"/>
+                                        <constraint firstItem="cdu-mo-3BG" firstAttribute="leading" secondItem="gva-s3-2RH" secondAttribute="leadingMargin" id="8Dw-em-kFh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cdu-mo-3BG" secondAttribute="trailing" id="rfH-lv-83m"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="chatEventName" destination="jkF-n0-2B5" id="aeK-7F-aeT"/>
+                                    <outlet property="userChatImage" destination="Eu6-VN-ysV" id="KBU-Ud-aCF"/>
+                                    <segue destination="jUs-pj-8Ia" kind="show" identifier="showChat" id="WJs-lf-YgM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -111,20 +141,16 @@
                             <outlet property="delegate" destination="dcQ-zk-mVD" id="QTC-gC-SUH"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Chats" id="m40-1d-dwE"/>
-                    <navigationItem key="navigationItem" id="Exh-dr-BWI"/>
-                    <connections>
-                        <segue destination="jUs-pj-8Ia" kind="show" id="WXQ-ZN-TOp"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Chats" id="9vK-0e-KyR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uck-Te-HVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="1518"/>
+            <point key="canvasLocation" x="1188" y="1517.9910044977512"/>
         </scene>
-        <!--Title-->
+        <!--Lary-->
         <scene sceneID="WvU-Kt-ikT">
             <objects>
-                <viewController id="jUs-pj-8Ia" customClass="UITableViewController" sceneMemberID="viewController">
+                <viewController id="jUs-pj-8Ia" customClass="ChatViewController" customModule="Guiamigo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kng-Dn-Cj3"/>
                         <viewControllerLayoutGuide type="bottom" id="1lr-tw-571"/>
@@ -133,14 +159,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="before-and-after-ios-7-names" translatesAutoresizingMaskIntoConstraints="NO" id="eao-SB-bpw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="before-and-after-ios-7-names" translatesAutoresizingMaskIntoConstraints="NO" id="eao-SB-bpw">
+                                <rect key="frame" x="0.0" y="-31" width="375" height="649"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="io0-b9-x8g">
                                 <rect key="frame" x="1" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Chat" id="bJk-3e-2yW"/>
+                                    <navigationItem title="Lary" id="bJk-3e-2yW"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -156,11 +182,14 @@
                             <outlet property="chatView" destination="eao-SB-bpw" id="GX2-5D-CnF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="LOB-j5-xzF"/>
+                    <navigationItem key="navigationItem" title="Lary" prompt="Guiamigo" id="LOB-j5-xzF"/>
+                    <connections>
+                        <outlet property="chatPicture" destination="eao-SB-bpw" id="TAC-1n-yZx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMK-ps-I58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029.5999999999999" y="1517.9910044977512"/>
+            <point key="canvasLocation" x="1968.8" y="1517.9910044977512"/>
         </scene>
         <!--Choose location-->
         <scene sceneID="w1l-y1-zl0">
@@ -213,8 +242,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-rn-a51">
-                                <rect key="frame" x="24" y="72" width="327" height="535"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-rn-a51">
+                                <rect key="frame" x="24" y="80" width="327" height="535"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-JC-zZM">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
@@ -257,7 +286,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Set Event" id="iDn-Nz-TMV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CQb-ZQ-6SP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CQb-ZQ-6SP">
+                            <connections>
+                                <action selector="saveNewEventButton:" destination="jKy-0O-eSQ" id="8Mq-pT-Nfo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="endTimeDatePicker" destination="NW6-jD-mDL" id="bci-Mj-Lmw"/>
@@ -268,6 +301,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec9-pf-qeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1830" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wBq-4J-wSG">
+            <objects>
+                <viewController id="efZ-eV-hBo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVf-S4-GmY"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkU-0X-woR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rRQ-zw-whL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-tg-6Mk">
+                                <rect key="frame" x="16" y="28" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7g-wg-oOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-316"/>
         </scene>
         <!--Sign in-->
         <scene sceneID="tpa-Zm-Bto">
@@ -425,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgz-FA-eXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="1156"/>
+            <point key="canvasLocation" x="3575.1999999999998" y="1155.472263868066"/>
         </scene>
         <!--Login-->
         <scene sceneID="42u-3z-n6O">
@@ -439,8 +496,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="clp-Hc-rt4" userLabel="Login Stack View">
-                                <rect key="frame" x="24" y="72" width="327" height="144"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="clp-Hc-rt4" userLabel="Login Stack View">
+                                <rect key="frame" x="24" y="120" width="327" height="144"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-OB-evH">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
@@ -492,6 +549,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltU-LG-a0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2636" y="484"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="3ki-p1-WVD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Vj-S5-99D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" id="m40-1d-dwE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QCS-LZ-mfl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dcQ-zk-mVD" kind="relationship" relationship="rootViewController" id="yTG-EP-R51"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izO-Mx-Kmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="1517.9910044977512"/>
         </scene>
     </scenes>
     <resources>

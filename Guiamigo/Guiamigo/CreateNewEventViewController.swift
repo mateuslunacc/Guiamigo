@@ -10,13 +10,6 @@ import UIKit
 
 class CreateNewEventViewController: UIViewController {
 
-    @IBAction func saveNewEventButton(_ sender: UIBarButtonItem) {
-        //newEvent = Event(name: <#T##String#>, start: startTimeDatePicker.date, end: startTimeDatePicker.date, latitude: <#T##Double#>, longitude: <#T##Double#>, host: <#T##User#>)
-        
-        self.navigationController?.popToRootViewController(animated: true)
-        
-    }
-    
     @IBOutlet weak var eventNameTextLabel: UITextField!
     
     @IBOutlet weak var startTimeDatePicker: UIDatePicker!
@@ -27,16 +20,42 @@ class CreateNewEventViewController: UIViewController {
     var latitude = 0.0
     var longitude = 0.0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //newEvent?.name = self.eventNameTextLabel.text!
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func saveNewEventButton(_ sender: UIBarButtonItem) {
+        newEvent = Event(name: eventNameTextLabel.text!,
+                         start: startTimeDatePicker.date as NSDate,
+                         end: endTimeDatePicker.date as NSDate,
+                         latitude: self.latitude,
+                         longitude: self.longitude,
+                         host: UserDAO.userLogged!)
+        
+        EventDAO.events.append(newEvent!)
+        
+        let alert: UIAlertController = UIAlertController(title: "Success",
+                                                         message: "Event created successfully!",
+                                                         preferredStyle: .alert)
+        
+        // 1.1. Caso queira adicionar funções
+        let action: UIAlertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // Aqui insira o código a ser executado caso o usuário execute a ação
+            //print("O usuário escolheu: \(action.title)")
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        // 1.2. Adicione a ação na sua AlertController
+        alert.addAction(action)
+        
+        // 2. Mostrando o alerta para o usuário
+        self.present(alert, animated: true, completion: {
+            //print("Alerta completo!")
+        })
+            
+        
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
 
     /*
     // MARK: - Navigation
