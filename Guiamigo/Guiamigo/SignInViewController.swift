@@ -14,9 +14,11 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var logInButton: UIButton!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.backgroundImage.image = UIImage(named: "background-image")
         self.tabBarController?.tabBar.isHidden = true
 
         // Do any additional setup after loading the view.

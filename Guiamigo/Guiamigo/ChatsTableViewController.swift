@@ -54,6 +54,7 @@ class ChatsTableViewController: UITableViewController {
             chat = self.chats[indexPath.row]
             
             chatCell.chatEventName.text = chat.event.name
+            chatCell.hostName.text = "\(chat.user.firstName) \(chat.user.lastName)"
             chatCell.userChatImage.image = UIImage(named: chat.user.picture)
             
         }
@@ -109,8 +110,8 @@ class ChatsTableViewController: UITableViewController {
         if segue.identifier == "showChat" {
             if let chatView = segue.destination as? ChatViewController {
                 
-                let indexChat = tableView.indexPathForSelectedRow?.row
-                //chatView.chatPicture = chats[indexChat!]
+                //let indexChat = tableView.indexPathForSelectedRow?.row
+                //chatView.chatPicture.image = UIImage(named: "before-and-after-ios-7-names")
                 
             }
         }

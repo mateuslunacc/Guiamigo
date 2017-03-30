@@ -15,6 +15,7 @@
 		3F04617C1E8C4778005FF532 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */; };
 		3F04617E1E8C48C7005FF532 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617D1E8C48C7005FF532 /* Chat.swift */; };
 		3F0461801E8C4A2D005FF532 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */; };
+		3F0461821E8D7767005FF532 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0461811E8D7767005FF532 /* ChatTableViewCell.swift */; };
 		3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC451E8300400038B631 /* AppDelegate.swift */; };
 		3F3CCC481E8300400038B631 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCC471E8300400038B631 /* MainViewController.swift */; };
 		3F3CCC4B1E8300400038B631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3CCC491E8300400038B631 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		3F3CCCD91E84621C0038B631 /* guiamigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCD71E84621C0038B631 /* guiamigo.xcdatamodeld */; };
 		3F3CCCDB1E8466AE0038B631 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCDA1E8466AE0038B631 /* Event.swift */; };
 		3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */; };
-		3F65F7981E8C32A9007C6C7A /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65F7971E8C32A9007C6C7A /* ChatTableViewCell.swift */; };
 		3FF1A9421E846CD4001FDB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1A9411E846CD4001FDB22 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 		3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		3F04617D1E8C48C7005FF532 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3F0461811E8D7767005FF532 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		3F3CCC421E8300400038B631 /* Guiamigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiamigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3CCC451E8300400038B631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3CCC471E8300400038B631 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		3F3CCCD81E84621C0038B631 /* guiamigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = guiamigo.xcdatamodel; sourceTree = "<group>"; };
 		3F3CCCDA1E8466AE0038B631 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		3F65F7971E8C32A9007C6C7A /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewCell.swift; path = ../ChatTableViewCell.swift; sourceTree = "<group>"; };
 		3FF1A9411E846CD4001FDB22 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F0461831E8D7AB6005FF532 /* Sign in FIles */ = {
+			isa = PBXGroup;
+			children = (
+				3F0461751E899649005FF532 /* SignUpViewController.swift */,
+				3F0461731E899637005FF532 /* LogInViewController.swift */,
+				3F0461711E89960D005FF532 /* SignInViewController.swift */,
+			);
+			name = "Sign in FIles";
+			sourceTree = "<group>";
+		};
+		3F0461841E8D7AE1005FF532 /* Chat Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */,
+				3F0461811E8D7767005FF532 /* ChatTableViewCell.swift */,
+				3F04617D1E8C48C7005FF532 /* Chat.swift */,
+				3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */,
+			);
+			name = "Chat Files";
+			sourceTree = "<group>";
+		};
+		3F0461851E8D7AFF005FF532 /* Event Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F3CCCDA1E8466AE0038B631 /* Event.swift */,
+				3FF1A9411E846CD4001FDB22 /* User.swift */,
+				3F3CCC471E8300400038B631 /* MainViewController.swift */,
+				3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */,
+				3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */,
+			);
+			name = "Event Files";
+			sourceTree = "<group>";
+		};
 		3F3CCC391E8300400038B631 = {
 			isa = PBXGroup;
 			children = (
@@ -82,20 +115,11 @@
 			children = (
 				3F3CCCDC1E8468820038B631 /* Supporting Files */,
 				3F3CCCED1E846B2B0038B631 /* CoreDataManager.swift */,
-				3F65F7971E8C32A9007C6C7A /* ChatTableViewCell.swift */,
-				3F04617F1E8C4A2D005FF532 /* ChatViewController.swift */,
+				3F0461841E8D7AE1005FF532 /* Chat Files */,
+				3F0461851E8D7AFF005FF532 /* Event Files */,
 				3F3CCCD71E84621C0038B631 /* guiamigo.xcdatamodeld */,
-				3F3CCCDA1E8466AE0038B631 /* Event.swift */,
-				3FF1A9411E846CD4001FDB22 /* User.swift */,
-				3F3CCC471E8300400038B631 /* MainViewController.swift */,
 				3F3CCC491E8300400038B631 /* Main.storyboard */,
-				3F04617D1E8C48C7005FF532 /* Chat.swift */,
-				3F04617B1E8C4778005FF532 /* ChatsTableViewController.swift */,
-				3F0461791E8AEB13005FF532 /* NewLocationViewController.swift */,
-				3F0461771E8AE08D005FF532 /* CreateNewEventViewController.swift */,
-				3F0461751E899649005FF532 /* SignUpViewController.swift */,
-				3F0461731E899637005FF532 /* LogInViewController.swift */,
-				3F0461711E89960D005FF532 /* SignInViewController.swift */,
+				3F0461831E8D7AB6005FF532 /* Sign in FIles */,
 				3F3CCC4C1E8300400038B631 /* Assets.xcassets */,
 			);
 			path = Guiamigo;
@@ -194,9 +218,9 @@
 				3F04617A1E8AEB13005FF532 /* NewLocationViewController.swift in Sources */,
 				3F3CCCEE1E846B2B0038B631 /* CoreDataManager.swift in Sources */,
 				3F04617E1E8C48C7005FF532 /* Chat.swift in Sources */,
-				3F65F7981E8C32A9007C6C7A /* ChatTableViewCell.swift in Sources */,
 				3F0461781E8AE08D005FF532 /* CreateNewEventViewController.swift in Sources */,
 				3F04617C1E8C4778005FF532 /* ChatsTableViewController.swift in Sources */,
+				3F0461821E8D7767005FF532 /* ChatTableViewCell.swift in Sources */,
 				3F0461801E8C4A2D005FF532 /* ChatViewController.swift in Sources */,
 				3F3CCC461E8300400038B631 /* AppDelegate.swift in Sources */,
 			);

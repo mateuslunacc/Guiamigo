@@ -65,6 +65,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate  {
         for event in EventDAO.events {
             let newAnnotation = MKPointAnnotation()
             
+            let startDate = event.startFormated
+            print(startDate)
+            
             newAnnotation.coordinate.latitude = event.latitude
             newAnnotation.coordinate.longitude = event.longitude
             newAnnotation.title = "\(event.host.firstName) \(event.host.lastName)"

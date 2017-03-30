@@ -11,7 +11,9 @@ import Foundation
 class Event {
     var name: String
     var start: NSDate
+    var startFormated: DateFormatter
     var end: NSDate
+    var endFormated: DateFormatter
     var latitude: Double
     var longitude: Double
     var host: User
@@ -23,7 +25,19 @@ class Event {
         self.latitude = latitude
         self.longitude = longitude
         self.host = host
+        
+        let startFormated = DateFormatter()
+        let endFormated = DateFormatter()
+        
+        startFormated.dateFormat = "dd/MM/yy hh:mm:ss"
+        startFormated.string(from: start as Date)
 
+        endFormated.dateFormat = "dd/MM/yy hh:mm:ss"
+        endFormated.string(from: start as Date)
+        
+        self.startFormated = startFormated
+        self.endFormated = endFormated
+        
     }
     
     init (name: String, latitude: Double, longitude: Double, host: User) {
@@ -33,6 +47,19 @@ class Event {
         self.host = host
         self.start = NSDate()
         self.end = NSDate()
+        
+        let startFormated = DateFormatter()
+        let endFormated = DateFormatter()
+        
+        startFormated.dateFormat = "dd/MM/yy hh:mm:ss"
+        startFormated.string(from: start as Date)
+        
+        endFormated.dateFormat = "dd/MM/yy hh:mm:ss"
+        endFormated.string(from: start as Date)
+        
+        self.startFormated = startFormated
+        self.endFormated = endFormated
+        
     }
 }
 
@@ -51,7 +78,7 @@ class EventDAO {
         events.append(Event(name: "Treino de parkour", latitude: -7.22714484, longitude: -35.87819338, host: user2))
         events.append(Event(name: "Rafa dancing", latitude: -7.221281, longitude: -35.887687, host: user3))
         events.append(Event(name: "Calourada dos Feras de CC", latitude: -7.215190, longitude: -35.909681, host: user4))
-        events.append(Event(name: "Festa no CU!", latitude: -7.217335, longitude: -35.910786, host: user5))
+        events.append(Event(name: "Festa no Cantinho!", latitude: -7.217335, longitude: -35.910786, host: user5))
         events.append(Event(name: "Visitação no Hackatruck", latitude: -7.216846, longitude: -35.912074, host: user6))
         
         return events

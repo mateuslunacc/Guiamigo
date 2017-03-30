@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.chatPicture.image = UIImage(named: "before-and-after-ios-7-names")
         // Do any additional setup after loading the view.
     }
 

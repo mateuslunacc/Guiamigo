@@ -14,4 +14,6 @@ class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet weak var chatEventName: UILabel!
 
+    @IBOutlet weak var hostName: UILabel!
+    
 }
